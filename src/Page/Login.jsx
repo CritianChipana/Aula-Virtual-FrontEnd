@@ -45,7 +45,7 @@ export default function Login() {
                 <Paper elevation = {10} style = {paperStyle} >
                     <Grid align = 'center'>
                         <Avatar style = { avatarStyle } ><LockOpenOutlinedIcon/></Avatar>
-                        <h2>Sign In</h2>
+                        <h2>Login</h2>
                         <TextField style = { typeFileStyle } id="email" label="Correo" variant="standard" fullWidth required />
                         <TextField style = { typeFileStyle } id="password" label="Contraseña" variant="standard" type='password' fullWidth required />
                         <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
