@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from 'react-router-dom';
 
 import { Grid } from "@material-ui/core";
 import LelftBar from "../Components/LeftBar/LelftBar";
 import NavBar from "../Components/NavBar/NavBar";
 
-import { makeStyles } from "@material-ui/core";
+// import { makeStyles } from "@material-ui/core";
 import Add from "../Components/Add/Add";
 
 import Inicio from "./Inicio";
@@ -16,27 +16,24 @@ import VideosPropios from "./VideosPropios";
 
 
 
-const useStyles = makeStyles((theme) => ({
-    right: {
-        [theme.breakpoints.down("sm")]: {
-            display: "none",
-        },
-    },
-}));
+// const useStyles = makeStyles((theme) => ({
+//     right: {
+//         [theme.breakpoints.down("sm")]: {
+//             display: "none",
+//         },
+//     },
+// }));
 
 const Home = () => {
-    const classes = useStyles();
-
-    const [viewOpen, setViewOpen] = useState(1);
+    // const classes = useStyles();
 
     return (
         <div>
             <NavBar />
             <Grid container>
                 <Grid item sm={2} xs={2}>
-                    <LelftBar setViewOpen={setViewOpen} />
+                    <LelftBar />
                 </Grid>
-
 
                 <Routes>
                     <Route  path="/home/inicio" element={ <Inicio/> } />

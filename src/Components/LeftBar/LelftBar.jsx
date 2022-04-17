@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         height: "100vh",
         color: "black",
         paddingTop: theme.spacing(10),
-        backgroundColor: theme.palette.primary.main,
+        // backgroundColor: theme.palette.primary.main,
         position: "sticky",
         top: 0,
         [theme.breakpoints.up("sm")]: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 const LelftBar = ({ setViewOpen }) => {
     const classes = useStyles();
 
-    const [selectedIndex, setSelectedIndex] = useState(1);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
@@ -157,52 +157,55 @@ const LelftBar = ({ setViewOpen }) => {
                     </ListItemButton>
                 </NavLink>
 
-                <NavLink to="/inicio">
+                <NavLink to="/aprendo-en-casa">
                     <ListItemButton
                         className={classes.item}
                         selected={selectedIndex === 5}
                         onClick={(event) => handleListItemClick(event, 5)}
                     >
                         <ListItemIcon>
-                            <LogoutIcon className={classes.icon} />
+                            <VideoCameraFrontIcon className={classes.icon} />
                         </ListItemIcon>
                         <ListItemText
-                            primary="Cerrar sesion"
+                            primary="Aprendo en casa"
                             className={classes.text}
                         />
                     </ListItemButton>
                 </NavLink>
+
+                <NavLink to="/pastoral-educativa">
+                    <ListItemButton
+                        className={classes.item}
+                        selected={selectedIndex === 6}
+                        onClick={(event) => handleListItemClick(event, 6)}
+                    >
+                        <ListItemIcon>
+                            <VideoCameraFrontIcon className={classes.icon} />
+                        </ListItemIcon>
+
+                        <ListItemText
+                            primary="Pastoral Educativa"
+                            className={classes.text}
+                        />
+                    </ListItemButton>
+                </NavLink>
+
+                <NavLink to="/logOut">
+                    <ListItemButton
+                        className={classes.item}
+                        selected={selectedIndex === 7}
+                        onClick={(event) => handleListItemClick(event, 7)}
+                    >
+                        <ListItemIcon>
+                            <LogoutIcon className={classes.icon} />
+                        </ListItemIcon>
+                        <ListItemText
+                            className={classes.text}
+                            primary="Cerrar sesion"
+                        />
+                    </ListItemButton>
+                </NavLink>
             </List>
-
-            {/* <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Inicio</Typography>
-      </div>
-
-      <div className={classes.item}>
-        <BookIcon className={classes.icon} />
-        <Typography className={classes.text}>La biblia</Typography>
-      </div>
-
-      <div className={classes.item}>
-        <DesktopWindowsIcon className={classes.icon} />
-        <Typography className={classes.text}>Actividades</Typography>
-      </div>
-
-      <div className={classes.item}>
-        <OndemandVideoIcon className={classes.icon} />
-        <Typography className={classes.text}>Videos</Typography>
-      </div>
-
-      <div className={classes.item}>
-        <VideoCameraFrontIcon className={classes.icon} />
-        <Typography className={classes.text}>Videos Producidos</Typography>
-      </div>
-
-      <div className={classes.item}>
-        <LogoutIcon className={classes.icon} />
-        <Typography className={classes.text}>Cerrar sesion</Typography>
-      </div> */}
         </Container>
     );
 };

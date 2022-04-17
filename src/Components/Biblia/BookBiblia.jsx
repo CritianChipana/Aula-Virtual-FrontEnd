@@ -9,18 +9,25 @@ import {
 } from "@material-ui/core";
 import React from "react";
 
-const BookBiblia = ({title = "Titulo", urlImage="https://sanpabloperu.com.pe/uploads/products/ESBBB00300769-4/biblia-latinoamericana-rustica-simple-238.jpg"}) => {
+const BookBiblia = ({
+    title = "Titulo",
+    urlImage = "https://sanpabloperu.com.pe/uploads/products/ESBBB00300769-4/biblia-latinoamericana-rustica-simple-238.jpg",
+}) => {
+    const handleOpenBiblia = () => {
+        console.log("hola");
+    };
+
     return (
         <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
+            <CardActionArea onClick={handleOpenBiblia} >
                 <CardMedia
                     component="img"
                     height="100%"
                     width="50"
-                    image={ urlImage }
+                    image={urlImage}
                     alt="green iguana"
                 />
-                <CardContent >
+                <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {title}
                     </Typography>
@@ -28,7 +35,9 @@ const BookBiblia = ({title = "Titulo", urlImage="https://sanpabloperu.com.pe/upl
             </CardActionArea>
 
             <CardActions>
-                <Button size="small">Abrir</Button>
+                <Button size="small" onClick={handleOpenBiblia}>
+                    Abrir
+                </Button>
             </CardActions>
         </Card>
     );

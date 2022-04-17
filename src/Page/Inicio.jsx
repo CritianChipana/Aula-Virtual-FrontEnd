@@ -1,11 +1,22 @@
 import React from "react";
 
-import { Container, makeStyles } from "@material-ui/core";
-import Post from "../Components/Post/Post";
+import {
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Container,
+    makeStyles,
+    Typography,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     container: {
         paddingTop: theme.spacing(10),
+        // backgroundColor: "red",
+    },
+    curso: {
+        marginBottom: theme.spacing(2),
     },
 }));
 
@@ -14,12 +25,27 @@ const Inicio = () => {
 
     return (
         <Container className={classes.container}>
-            <Post
-                title="Virgen Maria"
-                paragraph="Para la Iglesia católica, la Virgen María es Madre de Dios en cuanto es verdadera madre de Jesús que es Dios. María no engendró al Verbo (segunda persona de la Trinidad) ya que, como Dios, es eterno, pero sí a Jesús que es el Verbo hecho hombre."
-                urlImage="https://pbs.twimg.com/profile_images/1360428498570129410/uYaDhIG5_400x400.jpg"
-            />
-            <Post />
+            <Card sx={{ maxWidth: 345 }} className={classes.curso}>
+                <CardContent>
+                    <Typography gutterBottom variant="h5">
+                        Curso de Religion
+                    </Typography>
+                </CardContent>
+            </Card>
+            <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    image="https://cdn.discordapp.com/attachments/965298358375841792/965298681312083968/unknown.png"
+                />
+            </Card>
+            <Card sx={{ maxWidth: 345 }} className={classes.curso}>
+                <CardContent>
+                    <Typography gutterBottom variant="body-2">
+                    &copy;  Lic. YRAIDA RUIZ COLLADO
+                    </Typography>
+                </CardContent>
+            </Card>
         </Container>
     );
 };
