@@ -44,17 +44,7 @@ const Home = () => {
                     <Route  path="/" element={ <Inicio/> } />
 
                 </Routes>
-                {/* <Grid item sm={10} xs={10}>
-                    {viewOpen === 0 && <Inicio />}
-                    {viewOpen === 1 && <Biblia />}
-                    {viewOpen === 2 && <Actividades />}
-                    {viewOpen === 3 && <Videos />}
-                    {viewOpen === 4 && <VideosPropios />}
-                </Grid> */}
-
-                {/* <Grid item sm={3} className={ClassNames.right}>
-                    <RightBar />
-                </Grid> */}
+            
             </Grid>
             <Add />
         </div>

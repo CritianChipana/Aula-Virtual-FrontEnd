@@ -2,7 +2,6 @@ import React from "react";
 
 import {
     Card,
-    CardActions,
     CardContent,
     CardMedia,
     Container,
@@ -41,7 +40,7 @@ const Inicio = () => {
             </Card>
             <Card sx={{ maxWidth: 345 }} className={classes.curso}>
                 <CardContent>
-                    <Typography gutterBottom variant="body-2">
+                    <Typography gutterBottom variant="body2">
                     &copy;  Lic. YRAIDA RUIZ COLLADO
                     </Typography>
                 </CardContent>

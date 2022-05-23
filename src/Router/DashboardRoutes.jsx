@@ -3,7 +3,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import LelftBar from "../Components/LeftBar/LelftBar";
 import NavBar from "../Components/NavBar/NavBar";
-import Actividades from "../Page/Actividades";
+import Actividades from "../Page/Actividades/Actividades";
+import DetalleActivity from "../Page/Actividades/DetalleActivity";
 import AprendoEnCasa from "../Page/AprendoEnCasa";
 import Biblia from "../Page/Biblia";
 import Inicio from "../Page/Inicio";
@@ -27,6 +28,7 @@ const DashboardRoutes = () => {
                         <Route path="/biblia" element={<Biblia />} />
                         <Route path="/biblia" element={<Biblia />} />
                         <Route path="/actividades" element={<Actividades />} />
+                        <Route path="/actividades/:id" element={<DetalleActivity />} />
                         <Route path="/videos" element={<Videos />} />
                         <Route path="/aprendo-en-casa" element={<AprendoEnCasa />} />
                         <Route path="/pastoral-educativa" element={<PastoralEducativa />} />
